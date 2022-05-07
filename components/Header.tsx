@@ -1,3 +1,18 @@
+interface ExternalLinkProps {
+  href: string;
+  apperanceClass: string;
+  text: string;
+}
+const ExternalLink = ({ href, apperanceClass, text }: ExternalLinkProps) => (
+  <a
+    className={`header__link ${apperanceClass}`}
+    rel='noopener nofollow noreferrer external'
+    target='_blank'
+    href={href}>
+    {text}
+  </a>
+);
+
 const Header = () => (
   <div className='header responsive-width-header'>
     <h1 className='header__main'>Welcome to Edson&apos;s MLB Hit Helper!</h1>
@@ -6,12 +21,12 @@ const Header = () => (
       2 to 3 bet parlays for hits.
     </p>
     <div className='header__links'>
-      <a className='header__link' href='https://github.com'>
-        View Repo
-      </a>
-      <a className='header__link' href='https://paypal.com'>
-        Donate
-      </a>
+      <ExternalLink
+        href='https://github.com/edsonjaramillo/mlb_hit_helper'
+        text='View Repo'
+        apperanceClass='header--github'
+      />
+      <ExternalLink href={`https://venmo.com/code?user_id=2570444435619840115&created=1651967382.92727&printed=1`} text='Donate' apperanceClass='header--venmo' />
     </div>
   </div>
 );
