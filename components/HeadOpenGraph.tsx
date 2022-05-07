@@ -24,11 +24,11 @@ const HeadOpenGraph = ({
   children,
 }: HeadOpenGraphProps) => {
   const { asPath } = useRouter();
-  const url = 'https://edson-portfolio.vercel.app';
+  const url = 'https://mlb-hit-helper.vercel.app';
 
   return (
     <Head>
-      <title>{`${title} | Edson's Hit Helper`}</title>
+      <title>{`${title} | Edson's MLB Hit Helper`}</title>
       <meta name='description' content={description} />
       <meta property='og:url' content={url} />
       <meta property='og:type' content={ogType} />
