@@ -1,0 +1,20 @@
+.responsive-width {
+  width: min(90%, 44rem);
+  margin: auto;
+}
+
+.responsive-width-header {
+  width: min(90%, 38rem);
+  margin: auto;
+}
+
+.responsive-width-footer {
+  width: fit-content;
+  margin: auto;
+}
+
+.responsive-width-sitemap {
+  width: min(90%, 40rem);
+  margin: auto;
+  min-height: 70vh;
+}

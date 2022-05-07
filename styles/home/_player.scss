@@ -1,0 +1,57 @@
+.playergrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.player {
+  border: 1px solid $grayscale-200;
+
+  &__headergrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    font-weight: 600;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__lastgames {
+    display: block;
+    font-weight: 700;
+    padding: 0.5rem;
+    color: $grayscale-600;
+  }
+
+  &__table th {
+    text-align: left;
+  }
+
+  &__table td,
+  th {
+    padding: 0.35rem;
+    border: 1px solid $grayscale-200;
+  }
+
+  &--hits {
+    background-color: #a8ffb4;
+  }
+
+  &--nohits {
+    background-color: #ffb4a8;
+  }
+
+  @include media('>sm+') {
+    &__headergrid {
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+    }
+  }
+}
