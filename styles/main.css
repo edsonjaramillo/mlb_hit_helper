@@ -162,3 +162,9 @@ hr {
   font-weight: 500;
   min-width: 8rem;
 }
+.header--github {
+  background-color: #333;
+}
+.header--venmo {
+  background-color: #3D95CE;
+}
