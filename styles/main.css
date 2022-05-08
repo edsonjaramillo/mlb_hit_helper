@@ -142,6 +142,7 @@ hr {
 .header__main {
   font-weight: 600;
   font-size: clamp(1.25rem, 2vw, 2rem);
+  color: #002d72;
 }
 .header__sub {
   font-size: clamp(1rem, 2.5vw, 1.15rem);
