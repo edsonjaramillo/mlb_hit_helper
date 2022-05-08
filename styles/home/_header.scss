@@ -22,7 +22,6 @@
 
   &__link {
     @include button-size(1rem);
-    background-color: red;
     border-radius: $border-radius;
     color: $grayscale-100;
     font-weight: 500;
