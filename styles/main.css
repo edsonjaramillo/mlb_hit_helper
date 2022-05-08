@@ -105,8 +105,7 @@ hr {
   width: 100%;
   border-collapse: collapse;
 }
-.player__lastgames {
-  display: block;
+.player__caption {
   font-weight: 700;
   padding: 0.5rem;
   color: #606060;
@@ -165,5 +164,5 @@ hr {
   background-color: #333;
 }
 .header--venmo {
-  background-color: #3D95CE;
+  background-color: #3d95ce;
 }
