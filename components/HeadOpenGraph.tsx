@@ -44,7 +44,7 @@ const HeadOpenGraph = ({
       <meta name='twitter:image' content={image} />
       <meta name='twitter:image:alt' content={alt} />
       <link rel='canonical' href={url + asPath} />
-      <meta name='theme-color' content='#0067bb' />
+      <meta name='theme-color' content='#002d72' />
       <meta name='robots' content={robots} />
       {children}
     </Head>
