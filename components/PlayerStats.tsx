@@ -14,14 +14,16 @@ const PlayerStats = (batter: BatterType) => (
       <h2>{`${batter.name} | ${batter.team_name}`}</h2>
       <span>{`10 Game Hitting Average ${batter.moving_average}`}</span>
     </div>
-    <span className='player__lastgames'>Last 10 Games</span>
-    <table className='player__table'>
+    <table
+      className='player__table'
+      summary={`This table shows the previous 10 games that ${batter.name} has batted in along with team played, hits, and at bats.`}>
+      <caption className='player__caption'>Previous 10 Games</caption>
       <thead>
         <tr>
-          <th>Date</th>
-          <th>Team Played</th>
-          <th>Hits</th>
-          <th>At Bats</th>
+          <th scope='col'>Date</th>
+          <th scope='col'>Team Played</th>
+          <th scope='col'>Hits</th>
+          <th scope='col'>At Bats</th>
         </tr>
       </thead>
       <tbody>
