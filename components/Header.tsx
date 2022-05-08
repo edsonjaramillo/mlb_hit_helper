@@ -26,7 +26,11 @@ const Header = () => (
         text='View Repo'
         apperanceClass='header--github'
       />
-      <ExternalLink href={`https://venmo.com/code?user_id=2570444435619840115&created=1651967382.92727&printed=1`} text='Donate' apperanceClass='header--venmo' />
+      <ExternalLink
+        href={`https://venmo.com/code?user_id=2570444435619840115&created=1651967382.92727&printed=1`}
+        text='Donate'
+        apperanceClass='header--venmo'
+      />
     </div>
   </div>
 );
