@@ -8,9 +8,10 @@ import HeadOpenGraph from '@/components/HeadOpenGraph';
 
 interface HomepageProps {
   batterStats: BatterType[];
+  publishedAt: string;
 }
 
-const Home = ({ batterStats }: HomepageProps) => (
+const Home = ({ batterStats, publishedAt }: HomepageProps) => (
   <>
     <HeadOpenGraph
       title='Homepage'
@@ -18,7 +19,7 @@ const Home = ({ batterStats }: HomepageProps) => (
       image='https://media.graphassets.com/R6eiQkMeR92TzODxF9D5'
       alt={`Edson's MLB Hit Helper`}
     />
-    <Header />
+    <Header publishedAt={publishedAt} />
     <div className='responsive-width'>
       <div className='playergrid'>
         {batterStats.map((batter) => (
@@ -31,10 +32,11 @@ const Home = ({ batterStats }: HomepageProps) => (
 
 export const getStaticProps: GetStaticProps = async () => {
   const { batting } = await graphCMSClient.request(getBatterStats);
-  const { stats: batterStats } = batting;
+  const { stats: batterStats, publishedAt } = batting;
+  
 
   return {
-    props: { batterStats },
+    props: { batterStats, publishedAt },
   };
 };
 
