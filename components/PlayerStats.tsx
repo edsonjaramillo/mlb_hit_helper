@@ -12,11 +12,11 @@ const PlayerStats = (batter: BatterType) => (
       style={{ backgroundColor: batter.primary_color, color: batter.secondary_color }}
       className='player__headergrid'>
       <h2>{`${batter.name} | ${batter.team_name}`}</h2>
-      <span>{`10 Game Hitting Average ${batter.moving_average}`}</span>
+      <span>{`10 Game Hitting Average ${batter.moving_average.toFixed(1)}`}</span>
     </div>
     <table
       className='player__table'
-      summary={`This table shows the previous 10 games that ${batter.name} has batted in along with team played, hits, and at bats.`}>
+      summary={`This table shows the previous 10 games that ${batter.name} has batted in along with team played, hits, and at bats. ${batter.name}'s 10 day moving average is ${batter.moving_average}`}>
       <caption className='player__caption'>Previous 10 Games</caption>
       <thead>
         <tr>
